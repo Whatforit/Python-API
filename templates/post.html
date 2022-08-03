@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<h1 style="text-align: center;">Post</h1>
+<br>
+    <form class = "create" method="post">
+    <p><input type=text placeholder="Title" name=title size="50"></p>
+    <p><textarea placeholder="Content" name=content rows="10" cols="51"></textarea></p>
+    <p><input type=submit value=Post></p>
+    </form>
+{% endblock %}
+{% block error %}
+<div class="error">
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+</div>
+{% endblock %}
+{% block success %}
+<div class="success">
+    {% if success %}
+    <p>{{ success }}</p>
+    {% endif %}
+</div>
+{% endblock %}

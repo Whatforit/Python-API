@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for post in posts %}
+<br>
+<div class="post">
+    <p class = "header">{{ post.user_name }} --- {{ post.post_time }}</p>
+    <h2 class = "title">{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+</div>
+{% endfor %}
+{% endblock %}
